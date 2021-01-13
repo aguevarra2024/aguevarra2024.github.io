@@ -1,0 +1,400 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<style>
+		
+			html{
+				scroll-behavior: smooth;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.mainpage {
+				-ms-flex: 40%;
+				flex: 40%;
+				max-width: 40%;
+						}
+			}
+			
+			body {
+				font-family: "Lato", sans-serif;
+				background-color: #f2f2f2;
+				overflow-x: hidden;
+			}
+			
+			.header {	
+				width: 100%;
+				height: 550px;
+				display: block;
+				margin: 50px 0 0 0!important;
+				background-repeat: no-repeat;
+				text-align: center;
+				color: white;
+			}
+					
+			.centered { 
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-45%, -225%);
+				color: white;
+				font-size: 100px;
+				font-weight: bold;
+			}
+			
+			.subtitle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-45%, -380%);
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+
+			}
+		
+			.topnav {
+				
+				background-color: black;
+				float: left;
+				position: fixed;
+				width:100%;
+				top:0;
+				left:0;
+				right:0;
+				z-index: 1;
+			}
+			
+			.topnav a {
+				float: left;
+				display: block;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 20px 25px;
+				text-decoration: none;
+				font-size: 15px;
+				transition: 0.5s;
+
+			}
+			
+			
+			.topnav a:active {
+				background-color: #f2f2f2;
+				color:black;
+			}
+			
+			.topnav a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			
+			.topnav-right {
+				float: right;
+				color: white;
+				font-size: 15px;
+				transition: 0.5s;
+				
+			}
+			
+			.column {
+				float: left;
+				padding: 10px;
+				height: 300px;
+			}
+			
+			.sidenav {
+				width: 20%;
+				float: left;
+				margin-top: 80px;
+				height: 1000px;
+				background-color: black;
+				margin-left:50px;
+				color:white;
+				text-align: center;
+			}
+					
+			.content a {
+				font-size: 25px;
+				text-decoration: none;
+				color: white;
+				left: 0;
+				right: 0;
+				padding-top: 3%;
+				padding-bottom: 3%;
+				transition: 0.3s;
+				font-style: italic;
+				text-align: center;
+				background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+				transition: 0.5s background-size;
+			}
+			
+			.content a:hover {
+				background-size: 100% .1em;
+			}
+			
+			.readmore {
+				position: relative;
+				width: 50%
+			}
+			
+			.readmore:hover .picture {
+				opacity: 0.5;
+			}
+			
+			.readmore:hover .descmiddle {
+				opacity: 1;
+			}
+			
+			.picture {
+				padding-left:7%;
+				transition: 0.3s ease;
+				backface-visibility: hidden;
+				display: block;
+				
+			}
+			
+			.descmiddle {
+				transition: .8s ease;
+				opacity: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(15%, -50%);
+				-ms-transform: translate(0%, -50%)
+			}
+			
+			.desc {
+				background-color: #ddd;
+				color: black;
+				font-size: 16px;
+				padding: 20px 32px;
+				
+			}
+			
+			.desc a {
+				text-decoration: none;
+				color: black;
+				font-style: italic;
+			}
+			
+			.p1 {
+				text-align: justify;
+				width:60%;
+				margin-left: 380px;
+				display: block;
+				padding-right: 10px;
+				padding-left: 10px;
+				line-height: 40px;
+				float: right;
+				transform:translate(-15%,-330%)
+			}
+			
+			.mainpage{
+				content: "";
+				display: table;
+				clear: both;		
+			}
+			
+			.heading {
+				font-weight: bold;
+				font-size: 20%;
+			}
+			
+			.image {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+			}
+			
+			.image1 {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+			}
+			
+			
+			div.gallery {
+				border: 2px solid #ccc;
+				transition: 0.5s;
+			}
+
+			div.gallery:hover {
+				border: 2px solid #777;
+			}
+				
+			div.gallery img {
+				width: 245px;
+				height: 200px;
+				padding: 5px;
+				display: block;
+				
+			}
+			
+			div.description {
+				text-align: center;
+				background-color: white;
+				padding: 5px;
+				line-height: 30px;
+				font-style: italic;
+			}
+
+			.references {
+				padding: 6px;
+				float: left;
+				width: 23%;
+			}
+			
+			@media only screen and (max-width: 700px) {
+				.references {
+				width: 49.99999%;
+				margin: 6px 0;
+				}
+			}
+
+			@media only screen and (max-width: 500px) {
+				.references {
+				width: 100%;
+				}
+			}
+			
+			h1 { 
+				text-align: center;
+			}
+			
+			.aaa { 
+				text-align: center;
+			}
+
+		</style>
+		
+		<script>
+			history.scrollRestoration = "manual";	
+		</script>
+		
+		<title> Homepage </title>
+		
+	</head>
+	
+
+		
+	<body>
+		
+		<div class="topnav">
+				
+				<div class="topnav-left">
+					<a href="index.html">HOME</a>
+					<a href="content.html">CONTENT</a>
+					<a href="#topic3">REFERENCES</a>
+				</div>
+			
+				<div class="topnav-right">
+					<a href="author.html">ABOUT ME</a>
+				</div>
+			</div>
+		
+		<div class="container">
+				<img class="header" src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/123123449_1054181765072362_3707660285026700985_n.png?_nc_cat=109&ccb=2&_nc_sid=ae9488&_nc_ohc=PPn-ixEyms4AX_mQ5y_&_nc_ht=scontent.fcrk1-2.fna&oh=937fe358a969dab185278319d112651e&oe=6025D87D" alt="Food Insecurity" style="width:100%;">
+				<div class="centered"><a id="centered">MEET THE AUTHOR</a></div>
+				<div class="subtitle"> <br>A Pisay Scholar Just Trying to Pass.</div>
+		</div>
+		
+		<div class="mainpage">
+			
+			<div class="column sidenav">
+				<div class="content">
+					<p><b>CONTENT:</b>
+					<br>
+					<br>
+					<br>
+					<br> <a href="#topic1">INTRODUCTION</a> <br><br>
+					<br> <a href="#topic2">MOTIVATION BEHIND THE WORK</a> <br><br>
+					<br> <a href="#topic3">REFERENCES USED</a><br><br><br><br><br><br><br><br>
+					<b>READ MORE HERE:</b>
+					<br>
+					</p>
+				</div>
+				<div class="readmore">
+					<div class="picture">
+						<a target="_blank" href="https://www.borgenmagazine.com/causes-food-insecurity-in-the-philippines/">
+						<img src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/OTG6ACWRFFFARDLDLJQW6FI5ME.jpg" alt="More Information about Food Insecurity in the Philippines" width="350" height="250"></a>
+					</div>
+					<div class="descmiddle">
+						<div class="desc"><p>What Causes Food Insecurity in the Philippines?</p></div>
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			<div class="column p1">
+				<a id="topic1">
+				<h1>I N T R O D U C T I O N</h1>
+						<p> Hello! The person who coded and wrote this entire web page is none other then me, <b>Annikka S. Guevarra</b>. I am a student of Sir JM from 9-Samat, he is currently teaching us the basics of making a web page using CSS and HTML. This web page is my first quarter project for both CS 3 and English 3. The content is purely satire, and is not meant to be taken seriously. I only intended to inform the public how immense the enormity of food insecurity is here in the Philippines.  </p> 
+						<img src="https://image.freepik.com/free-vector/college-students-university-education-concept-people-illustration_169479-534.jpg" height="500" width="720" alt="Photo" class="image">
+				</a>
+			
+				<a id="topic2">
+				<h1>M O T I V A T I O N &nbsp; B E H I N D &nbsp;T H E&nbsp; W O R K</h1>
+					<p>Other than being motivated because this is a major project, I wanted to learn more about food insecurity and learn ways on how I can assist my fellow FIlipinos. I believe this issue is not getting the attention it deserves, it is taking hundreds of lives all over the globe and yet we blame their death on themselves for their "laziness" or "ignorance." With this web page, I hope to inform some people the depravity and misery most people are enduring right now. Every hour, every minute, ever second, a person could die of inadequate access of food.</p>
+					<img src="https://welpmagazine.com/wp-content/uploads/2020/09/University-Life-Illustration-1-1.jpg" class="image 1" width="720" height="500" alt="Photo">
+				</a>
+				
+			
+		
+				<a id="topic3">
+				<h1>R E F E R E N C E S &nbsp; U S E D</h1>
+				<p class="aaa">Here are the links for the references I used to complete my project.</p></a>
+				<div class="references">
+					<div class="gallery">
+						<a target="_blank" href="https://www.borgenmagazine.com/causes-food-insecurity-in-the-philippines/"><img src="https://cdn.dribbble.com/users/181520/screenshots/9447082/media/ef346873f7ca645f056310305167e101.jpg" alt="Reference 1"></a>
+						<div class="description">What Causes Food Insecurity in the Philippines?</div>
+					</div>
+				
+				</div>
+				
+				<div class="references">
+					<div class="gallery">
+						<a target="_blank" href="https://www.unicef.org/philippines/child-survival"><img src="https://cdn.dribbble.com/users/449667/screenshots/3550070/shot.jpg" alt="Reference 1"></a>
+						<div class="description">Child Survival<br><br></div>
+					</div>
+				
+				</div>
+				
+				<div class="references">
+					<div class="gallery">
+						<a target="_blank" href="http://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1044577/"><img src="https://png.pngtree.com/illustration/20190226/ourlarge/pngtree-illustration-field-night-landscape-image_3503.jpg" alt="Reference 1"></a>
+						<div class="description">Philippines: Chronic Food Insecurity Situation 2015-2020</div>
+					</div>
+				
+				</div>
+				
+				<div class="references">
+					<div class="gallery">
+						<a target="_blank" href="https://www.rappler.com/business/explainer-philippine-debt-soars-pandemic-should-filipinos-worry"><img src="https://steamuserimages-a.akamaihd.net/ugc/82593518793945521/F935CD1E1886F1D008030499FE89795EBAF1174F/" alt="Reference 1"></a>
+						<div class="description">As Philippine Debt Soars During the Pandemic, Should We Worry?</div>
+					</div>
+				
+				</div>
+				
+			</div>	
+		</div>
+		
+		</body>
+		
+</html>
+
+
+
+
+
+		
+
+		
+	

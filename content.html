@@ -1,0 +1,346 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<style>
+		
+			html{
+				scroll-behavior: smooth;
+				top: 0;
+				right: 0;
+				bottom:0;
+				left:0;
+			}
+			
+			body {
+				font-family: "Lato", sans-serif;
+				background-color: #f2f2f2;
+				overflow-x: hidden;
+			}
+			
+			.wholepage {
+				width: auto;
+				border: 1px solid #f2f2f2;
+				padding: auto;
+				margin: auto;
+			}
+			
+			.header {	
+				width: 100%;
+				height: 550px;
+				display: block;
+				margin: 50px 0 0 0!important;
+				background-repeat: no-repeat;
+				text-align: center;
+				color: white;
+			}
+					
+			.centered { 
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -200%);
+				color: white;
+				font-size: 70px;
+				font-weight: bold;
+			}
+			
+			.subtitle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -200%);
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+
+			}
+		
+			.topnav {
+				
+				background-color: black;
+				float: left;
+				position: fixed;
+				width:100%;
+				top:0;
+				left:0;
+				right:0;
+				z-index: 1;
+			}
+			
+			.topnav a {
+				float: left;
+				display: block;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 20px 25px;
+				text-decoration: none;
+				font-size: 15px;
+				transition: 0.5s;
+
+			}
+			
+			
+			.topnav a:active {
+				background-color: #f2f2f2;
+				color:black;
+			}
+			
+			.topnav a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			
+			.topnav-right {
+				float: right;
+				color: white;
+				font-size: 15px;
+				transition: 0.5s;
+				
+			}
+			
+			.column {
+				float: left;
+				padding: 10px;
+				height: 300px;
+			}
+			
+			.sidenav {
+				width: 20%;
+				float: left;
+				margin-top: 80px;
+				height: 1000px;
+				background-color: black;
+				margin-left:50px;
+				color:white;
+				text-align: center;
+			}
+					
+			.content a {
+				font-size: 25px;
+				text-decoration: none;
+				color: white;
+				left: 0;
+				right: 0;
+				padding-top: 5%;
+				padding-bottom: 5%;
+				transition: 0.3s;
+				font-style: italic;
+				text-align: center;
+				background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+				transition: 0.5s background-size;
+			}
+			
+			.content a:hover {
+				background-size: 100% .1em;
+			}
+			
+			.readmore {
+				position: relative;
+				width: 50%
+			}
+			
+			.readmore:hover .picture {
+				opacity: 0.5;
+			}
+			
+			.readmore:hover .descmiddle {
+				opacity: 1;
+			}
+			
+			.picture {
+				padding-left:7%;
+				transition: 0.3s ease;
+				backface-visibility: hidden;
+				display: block;
+				
+			}
+			
+			.descmiddle {
+				transition: .8s ease;
+				opacity: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(15%, -50%);
+				-ms-transform: translate(0%, -50%)
+			}
+			
+			.desc {
+				background-color: #ddd;
+				color: black;
+				font-size: 16px;
+				padding: 20px 32px;
+				
+			}
+			
+			.desc a {
+				text-decoration: none;
+				color: black;
+				font-style: italic;
+			}
+			
+			.p1 {
+				text-align: justify;
+				width:60%;
+				margin-left: 380px;
+				display: block;
+				padding-right: 10px;
+				padding-left: 10px;
+				line-height: 40px;
+				float: right;
+				font-size: 15px;
+				transform:translate(-15%,-330%)
+			}
+			
+			.mainpage{
+				content: "";
+				display: table;
+				clear: both;
+				height: 100%;
+				width:100%;
+			}
+			
+			.heading {
+				font-weight: bold;
+				font-size: 20%;
+			}
+			
+			.image {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 20vw;
+				width: 35vw;
+			}
+			
+			.image1 {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 20vw;
+				width: 35vw;
+			}
+			
+			.image2 {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 20vw;
+				width: 35vw;
+			}
+				
+			.topic1 {
+				text-align: center;
+				margin-top: 100px;
+				position:absolute;
+				left:50%;
+				bottom:0;
+				transform:translate(-50%,0%);
+			}
+			
+			h1 {
+				text-align: center;
+			}
+			
+		</style>
+		
+		<script>
+			history.scrollRestoration = "manual";	
+		</script>
+		
+		<title> Content </title>
+		
+	</head>
+	
+
+		
+	<body>
+	
+	<div class="whoelpage">
+		<div class="topnav">
+				
+				<div class="topnav-left">
+					<a href="index.html">HOME</a>
+					<a href="content.html">CONTENT</a>
+					<a href="author.html">REFERENCES</a>
+				</div>
+			
+				<div class="topnav-right">
+					<a href="author.html">ABOUT ME</a>
+				</div>
+			</div>
+		
+		<div class="container">
+				<img class="header" src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/123046298_672529483403943_6912062589144718434_n.png?_nc_cat=106&ccb=2&_nc_sid=ae9488&_nc_ohc=NKgKQeARLHQAX_vngie&_nc_ht=scontent.fcrk1-2.fna&oh=c534384b951af21e3843e38a4fb9c866&oe=602382FC" alt="A" style="width:100%;">
+				<div class="centered"><a id="centered">A DELECTABLE SOLUTION</a></div>
+				<div class="subtitle"> <br>Engaging in Cannibalism.</div>
+		</div>
+		
+		<div class="mainpage">
+			
+			<div class="column sidenav">
+				<div class="content">
+					<p><b>CONTENT:</b>
+					<br>
+					<br>
+					<br>
+					<br> <a href="#topic1">INTRODUCTION</a> <br><br>
+					<br> <a href="#topic2">ARGUMENTS</a> <br><br>
+					<br> <a href="#topic3">CONCLUSION</a><br><br><br><br><br><br><br><br>
+					<b>READ MORE HERE:</b>
+					<br>
+					</p>
+				</div>
+				<div class="readmore">
+					<div class="picture">
+						<a target="_blank" href="https://www.borgenmagazine.com/causes-food-insecurity-in-the-philippines/">
+						<img src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/OTG6ACWRFFFARDLDLJQW6FI5ME.jpg" alt="More Information about Food Insecurity in the Philippines" width="350" height="250"></a>
+					</div>
+					<div class="descmiddle">
+						<div class="desc"><p>What Causes Food Insecurity in the Philippines?</p></div>
+					</div>
+				
+				</div>
+			</div>
+			
+			
+			<div class="column p1">
+				<a id="topic1">
+				<h1>I N T R O D U C T I O N</h1>
+						<p> Our homeland, the Philippines, is one of the nations that is sorely infected with this quandary. Several foreigners who fly to our country have seen children with prominent rib cages and parents tired from the unceasing search for sustenance, they have witnessed the agonizing impacts of food insecurity hidden in our country. Even I, as a Filipino citizen, cannot deny the fact that our country is drowning in the depravity of the lack of food security. According to statistics, approximately half of the country is affected by it. <br><br>The IPC (Integrated Food Security Phase Classification) has gathered information regarding the percentage of chronic food insecurity reeking in the Philippines from the years 2015 to 2020. Their statistics show that around 64% of our population is suffering from food insecurity. Specifically, 38% experience mild food insecurity, 17% are moderate, and 8% suffer severely. Researchers infer that the food insecurity endured by the Philippine populace is driven by poor food consumption quality and a high level of chronic undernutrition. These statistics corroborate how immense the enormity of food insecurity in our country is. <br><br>You may assume that only hoping for the decline of the said plight, but I believe that there is no reason to wait for a solution any longer. As a cohort of Filipinos, I have arranged a proposal wherein it may abate the aforementioned dilemma; engage in cannibalism! It provides the perfect solution to the problem that plagues so many families. We all know that purchasing food is one of the most budget-consuming for the whole family, or how burdensome it is to scavenge just to provide some sustenance for your children. In this proposal, I will further discuss how cannibalism can immensely benefit the country as a whole.</p>
+						<img src="https://static01.nyt.com/images/2020/01/09/multimedia/09-Parenting-dietculturekids/09-Parenting-dietculturekids-superJumbo.jpg" width="720" height="500"  alt="Photo showing food security" class="image">
+				</a>
+			
+				<a id="topic2">
+				<h1>A R G U M E N T S</h1>
+					<p>Though the majority of the public agree that cannibalism is an appalling practice, I cannot identify anything wrong with it. If we have shamelessly eaten creatures like cows, pigs, and chickens, what is so reprehensible about engaging in the consumption of our fellow human beings? If my proposal were to be approved worldwide, it could resolve most, if not all, problems we are all currently facing; the overpopulation secluded in remote areas, the abundance of children being forced into labor at a young age, the severe malnutrition faced by indigent households, and several more. <br><br> One of the major issues that food insecurity contributes to is the malnutrition surrounding the youth. It has been confirmed by UNICEF Philippines that 95 children succumb to malnutrition every day. But by promoting cannibalism, parents or guardians will be obliged to provide nutrients for their children in order to auction them for a valuable rate. Our country’s health will be augmented if cannibalism was normalized, but our countrymen fail to look at the bigger picture. <br><br>Resorting to cannibalism will not only enrich our country’s overall health but also expand our trading systems and boost the nation’s economy. The Philippines currently has a total of ₱9.615 trillion in debt, and it seems to be only increasing as our government searches for a solution. Knowing that our country is infested with children that cause overpopulation, we still have hope to alleviate our national debt. If we were to cook, broil, or fry the youth and export them, the world would be introduced to new exotic flavors and crave for more.</p>
+					<img src="https://i0.wp.com/mossandfog.com/wp-content/uploads/2018/08/familytable3.jpg?resize=1024%2C683&ssl=1" class="image1" width="720" height="500" alt="Photo showing food insecurity">
+				</a>
+				
+				<a id="topic3">
+				<h1>C O N C L U S I O N</h1>
+				<p>We should no longer delay our nation’s development. Relying on our hopes and dreams for the betterment of our nation is not enough, it is time to take action before our conditions worsen. I believe that advocating for cannibalism is the first step to bringing our country bliss, it is the first step of beginning our new chapter. I arranged this proposal for the sole purpose of relieving the burden of my nation as a fellow Filipino. I strongly believe that cannibalism can and will provide new open doors and benefit the nation as a whole.</p>
+				<img src="https://static01.nyt.com/images/2019/11/19/well/well-guide-family-table-slide-YQD9/well-guide-family-table-slide-YQD9-jumbo.jpg" class="image2" width="720" height="450" alt="A way to end food insecurity">
+				</a>
+				
+			</div>
+		</div>
+	</div>
+		</body>
+		
+</html>
+		
+		
+
+		
+	

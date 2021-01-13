@@ -1,0 +1,354 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<style>
+		
+			html{
+				scroll-behavior: smooth;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.mainpage {
+				-ms-flex: 40%;
+				flex: 40%;
+				max-width: 40%;
+						}
+			}
+			
+			body {
+				font-family: "Lato", sans-serif;
+				background-color: #f2f2f2;
+				overflow-x: hidden;
+			}
+			
+			.wholepage {
+				width: auto;
+				border: 1px solid #f2f2f2;
+				padding: auto;
+				margin: auto;
+			}
+			
+			.header {	
+				width: 100%;
+				height: 550px;
+				display: block;
+				margin: 50px 0 0 0!important;
+				background-repeat: no-repeat;
+				text-align: center;
+				color: white;
+			}
+					
+			.centered { 
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -180%);
+				color: white;
+				font-size: 70px;
+				font-weight: bold;
+			}
+			
+			.subtitle {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -200%);
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+
+			}
+		
+			.topnav {
+				
+				background-color: black;
+				float: left;
+				position: fixed;
+				width:100%;
+				top:0;
+				left:0;
+				right:0;
+				z-index: 1;
+			}
+			
+			.topnav a {
+				float: left;
+				display: block;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 20px 25px;
+				text-decoration: none;
+				font-size: 15px;
+				transition: 0.5s;
+
+			}
+			
+			
+			.topnav a:active {
+				background-color: #f2f2f2;
+				color:black;
+			}
+			
+			.topnav a:hover {
+				background-color: #ddd;
+				color: black;
+			}
+			
+			.topnav-right {
+				float: right;
+				color: white;
+				font-size: 15px;
+				transition: 0.5s;
+				
+			}
+			
+			.column {
+				float: left;
+				padding: 10px;
+				height: 300px;
+			}
+			
+			.sidenav {
+				width: 20%;
+				float: left;
+				margin-top: 80px;
+				height: 1000px;
+				background-color: black;
+				margin-left:50px;
+				color:white;
+				text-align: center;
+			}
+					
+			.content a {
+				font-size: 25px;
+				text-decoration: none;
+				color: white;
+				left: 0;
+				right: 0;
+				padding-top: 5%;
+				padding-bottom: 5%;
+				transition: 0.3s;
+				font-style: italic;
+				text-align: center;
+				background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+				transition: 0.5s background-size;
+			}
+			
+			.content a:hover {
+				background-size: 100% .1em;
+			}
+			
+			.readmore {
+				position: relative;
+				width: 50%
+			}
+			
+			.readmore:hover .picture {
+				opacity: 0.5;
+			}
+			
+			.readmore:hover .descmiddle {
+				opacity: 1;
+			}
+			
+			.picture {
+				padding-left:7%;
+				transition: 0.3s ease;
+				backface-visibility: hidden;
+				display: block;	
+					
+			}
+			
+			.descmiddle {
+				transition: .8s ease;
+				opacity: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(15%, -50%);
+				-ms-transform: translate(0%, -50%)
+			}
+			
+			.desc {
+				background-color: #ddd;
+				color: black;
+				font-size: 16px;
+				padding: 20px 32px;
+				
+			}
+			
+			.desc a {
+				text-decoration: none;
+				color: black;
+				font-style: italic;
+			}
+			
+			.p1 {
+				text-align: justify;
+				width:60%;
+				margin-left: 380px;
+				display: block;
+				padding-right: 10px;
+				padding-left: 10px;
+				line-height: 40px;
+				float: right;
+				font-size: 15px;
+				transform:translate(-15%,-330%)
+			}
+			
+			.mainpage{
+				content: "";
+				display: table;
+				clear: both;		
+			}
+			
+			.heading {
+				font-weight: bold;
+				font-size: 20%;
+			}
+			
+			.image {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 22vw;
+				width: 30vw;
+			}
+			
+			.image1 {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 20vw;
+				width: 35vw;
+			}
+			
+			.image2 {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 50px;
+				padding-bottom: 100px;
+				height: 20vw;
+				width: 35vw;
+			}
+				
+			.topic1 {
+				text-align: center;
+				margin-top: 100px;
+				position:absolute;
+				left:50%;
+				bottom:0;
+				transform:translate(-50%,0%);
+			}
+			
+			.here a {
+				text-decoration: none;
+				color: black;
+				font-weight: bold;
+			}
+
+			h1 {
+				text-align: center;
+			}
+			
+		</style>
+		
+		<script>
+			history.scrollRestoration = "manual";	
+		</script>
+		
+		<title> Homepage </title>
+		
+	</head>
+	
+
+	
+	<body>
+	
+		<div class="wholepage">
+		
+			<div class="topnav">
+					
+				<div class="topnav-left">
+					<a href="index.html">HOME</a>
+					<a href="content.html">CONTENT</a>
+					<a href="author.html">REFERENCES</a>
+				</div>
+			
+				<div class="topnav-right">
+					<a href="author.html">ABOUT ME</a>
+				</div>
+			</div>
+		
+			<div class="container">
+					<img class="header" src="https://scontent.fcrk1-2.fna.fbcdn.net/v/t1.15752-9/122533892_1848920325245786_7343456777645917052_n.png?_nc_cat=106&ccb=2&_nc_sid=ae9488&_nc_ohc=EatnLQJht4AAX9nHzzS&_nc_ht=scontent.fcrk1-2.fna&oh=a7247420278ec1bd2d36571346fb55a6&oe=6022A67D" alt="Food Insecurity" style="width:100%;">
+					<div class="centered"><a id="centered">FOOD INSECURITY</a></div>
+					<div class="subtitle"> <br>The One that Plagues All.</div>
+			</div>
+		
+			<div class="mainpage">
+			
+				<div class="column sidenav">
+					<div class="content">
+						<p><b>CONTENT:</b>
+						<br>
+						<br>
+						<br>
+						<br> <a href="#topic1">DEFINITION</a> <br><br>
+						<br> <a href="#topic2"> CAUSES</a> <br><br>
+						<br> <a href="#topic3">SOLUTION</a><br><br><br><br><br><br><br><br>
+						<b>READ MORE HERE:</b>
+						<br>
+						</p>
+					</div>
+					<div class="readmore">
+						<div class="picture">
+							<a target="_blank" href="https://www.borgenmagazine.com/causes-food-insecurity-in-the-philippines/" >
+							<img src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/OTG6ACWRFFFARDLDLJQW6FI5ME.jpg"  width="350px" height="250px" alt="More Information about Food Insecurity in the Philippines"></a>
+						</div>
+						<div class="descmiddle">
+							<div class="desc"><p>What Causes Food Insecurity in the Philippines?</p></div>
+						</div>
+					
+					</div>
+				</div>
+			
+			
+				<div class="column p1">
+					<a id="topic1">
+					<h1>F O O D &nbsp; I N S E C U R I T Y</h1>
+							<p> This is the state of being without reliable access to a sufficient quantity of affordable, nutritious food. Thousands of people, especially children, around the world are experiencing severe hunger and malnourishment despite the mass production of food. The reason for this is the lack of food security in different countries. In our world today, markets and businesses are increasing the price of healthy food, leaving indigent households no choice but to eat less healthy food. With their condition, they are more likely to be obese or malnourished and prone to severe health complications. Food insecurity can look different for everybody; people tend to have either several excess fats or bones imprinted on their skin. One can either be extremely malnourished or obese. Countries must set food security as a national priority before the youth's overall well-being continuously decline. I believe that investing in children's health right away sets them on a path towards a prosperous, healthy future. </p> 
+							<img src="https://www.cancertodaymag.org/PublishingImages/Cancer%20Talk/2020%20January/food-1500-WEB.jpg" height="500" width="720" alt="Photo showing food security" class="image">
+					</a>
+			
+					<a id="topic2">
+					<h1>C A U S E S</h1>
+						<p>The food security of the nation heavily depends on their agricultural sector; therefore; challenged faced by their farmers and fishermen often have a detrimental effect on the availability of food in the country. Countries like the Philippines are also heavily affected by the prevalence of natural calamities. Their location in the middle of the Pacific makes them susceptible to typhoons and droughts, leading to the increase of food insecurity in their nation. Another factor that contributes to the inconsistency of food supply in the market is the lack of accessible roads that link farms to retailers. The notable absence of farm-to-market roads renders the transportation of their harvests. The inefficiency on this front is an unnecessary burden for farmers and fisherfolk, who instead of traversing these roads decide not to spend money and energy trying to bring their products to the market and instead let their produce go to waste. It brings loss that these farmers cannot afford and traps them in an ignominious cycle of poverty and hardship. </p>
+						<img src="https://www.presence.io/wp-content/uploads/2018/07/FoodPantry.png" class="image1" width="720" height="500" alt="Photo showing food insecurity">
+					</a>
+				
+					<a id="topic3">
+					<h1>T H E &nbsp; S O L U T I O N</h1></a>
+					<p>You may assume that only hoping for the decline of the said plight, but I believe that there is no reason to wait for a solution any longer. I have arranged a proposal wherein it may abate the aforementioned dilemma. You may access the information <a href="content.html">here</a>. I hope it may spark you to help those who are suffering from lack of food security.</p>
+					<img src="https://hub.umd.edu/sites/default/files/2019-09/image/Food-Pantry.png" class="image2" width="720" height="450" alt="A way to end food insecurity">	
+				</div>
+			</div>
+		</div>
+		
+		</body>
+		
+</html>
+		
+		
+
+		
+	
